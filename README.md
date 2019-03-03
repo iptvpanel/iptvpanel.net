@@ -1,6 +1,7 @@
 # iptvpanel2
 
-http://iptvpanel.net/
+
+<img src="http://iptvpanel.net/images/1.png">
 
 Features:
 
