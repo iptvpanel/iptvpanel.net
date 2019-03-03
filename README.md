@@ -39,12 +39,7 @@ How can I use it?
     Default login:
     username: admin
     password: admin
-        Add categorie
-        Add user
-        Add stream and use defined transcode profile 1 called default 1
-    You can use it also in proxy mode, but that depends on how you want to use it.
-    The most stable way is using transcode profile: default 1 without proxy mode ticket
-
+    
 Donations are greatly appreciated!
 
 <img src="https://camo.githubusercontent.com/f896f7d176663a1559376bb56aac4bdbbbe85ed1/68747470733a2f2f7777772e70617970616c6f626a656374732e636f6d2f656e5f55532f692f62746e2f62746e5f646f6e61746543435f4c472e676966" alt="Donate" title="Tyfix " data-canonical-src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="max-width:100%;">
