@@ -185,7 +185,7 @@ function writeConfig {
 function upgradeFiles {
 	if [ "$ISCMS" = "1" ]; then
 		echo -ne "${BCyan}Upgrading CMS...${Reset}"
-		wget -O /tmp/iptvpanel.tgz http://37.187.104.191/iptvpanel2-cms.tgz >> /dev/null 2>&1
+		wget -O /tmp/iptvpanel.tgz http://cd.iptvpanel.net/iptvpanel2-cms.tgz >> /dev/null 2>&1
 		tar xzvf /tmp/iptvpanel.tgz -C /opt >> /dev/null 2>&1
 		rm -rf /tmp/iptvpanel.tgz >> /dev/null 2>&1
 		
@@ -239,7 +239,7 @@ function upgradeFiles {
 	fi
 	if [ "$ISSTREAMER" = "1" ]; then
 		echo -ne "${BCyan}Upgrading streamer binaries...${Reset}"
-		wget -O /tmp/iptvpanel.tgz http://37.187.104.191/iptvpanel2-streamer.tgz >> /dev/null 2>&1
+		wget -O /tmp/iptvpanel.tgz http://cd.iptvpanel.net/iptvpanel2-streamer.tgz >> /dev/null 2>&1
 		tar xzvf /tmp/iptvpanel.tgz -C /opt >> /dev/null 2>&1
 		rm -rf /tmp/iptvpanel.tgz >> /dev/null 2>&1
 		echo -e "${BGreen}\t\t\tDone.${Reset}"
@@ -260,7 +260,7 @@ function installCMSPackages {
 		echo -e "listen_addresses = '127.0.0.1'\n" >> /etc/postgresql/9.3/main/postgresql.conf
 	fi
 	/etc/init.d/postgresql restart >> /var/log/iptvpanel-install.log 2>&1
-	wget -N -O /usr/share/GeoIP.dat.gz http://37.187.104.191/GeoIP.dat.gz >> /dev/null 2>&1
+	wget -N -O /usr/share/GeoIP.dat.gz http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz >> /dev/null 2>&1
 	gzip -d /usr/share/GeoIP.dat.gz >> /dev/null 2>&1
 	psql -U postgres -c "ALTER USER postgres WITH PASSWORD 'Pass22pp2019ssh808'" >> /var/log/iptvpanel-install.log 2>&1
 	echo -e "${BGreen}\t\t\tDone.${Reset}"
