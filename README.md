@@ -30,7 +30,7 @@ Our IPTV/OTT platform has integrated transcoding and re-streaming capabilities, 
 	
 Installation options:
 
-        wget https://github.com/iptvpanel/iptvpanel2/blob/master/new-installer.sh
+        wget https://github.com/iptvpanel/iptvpanel.net/blob/master/new-installer.sh
         chmod 755 new-installer.sh
         ./new-installer.sh
 
