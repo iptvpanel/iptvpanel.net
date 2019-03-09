@@ -151,8 +151,8 @@ function addServer {
 	if [ -f /opt/iptvpanel2/bin/ffprobe ]; then
 		echo -e "${BGreen}Binaries Ok!${Reset}";
 	else
-		wget -O /opt/iptvpanel2/bin/ffprobe hhttps://github.com/iptvpanel/iptvpanel2/raw/master/ffprobe  >> /dev/null 2>&1
-		wget -O /opt/iptvpanel2/bin/ffmpeg https://github.com/iptvpanel/iptvpanel2/raw/master/ffmpeg  >> /dev/null 2>&1
+		wget -O /opt/iptvpanel2/bin/ffprobe hhttps://github.com/iptvpanel/iptvpanel.net/raw/master/ffprobe  >> /dev/null 2>&1
+		wget -O /opt/iptvpanel2/bin/ffmpeg https://github.com/iptvpanel/iptvpanel.net/raw/master/ffmpeg  >> /dev/null 2>&1
 		chmod a+x /opt/iptvpanel2/bin/ffprobe >> /dev/null 2>&1
 		chmod a+x /opt/iptvpanel2/bin/ffmpeg >> /dev/null 2>&1
 		ln -s /usr/bin/rtmpdump /opt/iptvpanel2/bin
@@ -239,7 +239,7 @@ function upgradeFiles {
 	fi
 	if [ "$ISSTREAMER" = "1" ]; then
 		echo -ne "${BCyan}Upgrading streamer binaries...${Reset}"
-		wget -O /tmp/iptvpanel.tgz https://github.com/iptvpanel/iptvpanel2/raw/master/iptvpanel2-streamer.tgz >> /dev/null 2>&1
+		wget -O /tmp/iptvpanel.tgz https://github.com/iptvpanel/iptvpanel.net/raw/master/iptvpanel2-streamer.tgz >> /dev/null 2>&1
 		tar xzvf /tmp/iptvpanel.tgz -C /opt >> /dev/null 2>&1
 		rm -rf /tmp/iptvpanel.tgz >> /dev/null 2>&1
 		echo -e "${BGreen}\t\t\tDone.${Reset}"
@@ -260,7 +260,7 @@ function installCMSPackages {
 		echo -e "listen_addresses = '127.0.0.1'\n" >> /etc/postgresql/9.3/main/postgresql.conf
 	fi
 	/etc/init.d/postgresql restart >> /var/log/iptvpanel-install.log 2>&1
-	wget -N -O /usr/share/GeoIP.dat.gz https://github.com/iptvpanel/iptvpanel2/raw/master/GeoIP.dat.gz >> /dev/null 2>&1
+	wget -N -O /usr/share/GeoIP.dat.gz https://github.com/iptvpanel/iptvpanel.net/raw/master/GeoIP.dat.gz >> /dev/null 2>&1
 	gzip -d /usr/share/GeoIP.dat.gz >> /dev/null 2>&1
 	psql -U postgres -c "ALTER USER postgres WITH PASSWORD 'Pass22pp2019ssh808'" >> /var/log/iptvpanel-install.log 2>&1
 	echo -e "${BGreen}\t\t\tDone.${Reset}"
