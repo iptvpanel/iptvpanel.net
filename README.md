@@ -1,4 +1,4 @@
-# iptvpanel2
+# iptvpanel.net
 
 
 <img src="http://iptvpanel.net/images/1.png">
