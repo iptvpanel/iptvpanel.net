@@ -26,7 +26,7 @@ if [ "$0" == "./installer.sh" ]; then
 	echo -ne "You can't run this script here !!!!\n\n";
 	exit;
 fi
-echo -ne "${BGreen}Welcome to IPTVPANEL v2 install \n
+echo -ne "${BGreen}Welcome to IPTVPANEL v2 install  By Multics76\n
 ${BRed}Warning: This install script will remove your existing apache2 and its configuration in instead of it install nginx.${Reset}\n
 ${BWhite}Do you want continue (y/n):${Reset} ";
 read AGREE
